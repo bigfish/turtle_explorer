@@ -45,11 +45,9 @@
     <script src="lib/global_procedures.js" ></script>
 
     <script type="text/javascript" src="support/teleport/teleport.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      require.main('turtle_explorer/app');
-    </script>
     
   </head>
+
   <body bgcolor="white">
     <table style="margin:0;padding:0" width="100%" height="100%" cellpadding="0" cellspacing="0">
       <tr>
@@ -60,24 +58,20 @@
         </td>
         <td valign="top">
           <form style="width: 100%; height: 90%; padding-top: 8px">
-            <label id="instructions">Write or load example: </label>
-            <select id="select_example" onchange="load_example()">
-              <option value="circle">circle</option>
-              <option value="circles">circles</option>
-              <option value="spaghetti">spaghetti</option>
-              <option value="random_move_in_box">random move in box</option>
-              <option value="fills">fills</option>
-              <option value="rainbow_hair">rainbow_hair</option>
-            </select> 
+            <label id="instructions">Write some code: </label>
+
             <textarea id="turtle_buffer">SQUARE(100);</textarea>
             <br>
-            <input type="button" value="RUN" onclick="RUN()"/>
-            <input type="button" value="CLEAR SCREEN" onclick="RESET()"/>
+            <input type="button" value="RUN" id="runBtn"/>
+            <input type="button" value="CLEAR SCREEN" id="resetBtn"/>
             <p id="feedback" ></p>
           </form>
         </td>
       </tr>
     </table>
 
+    <script type="text/javascript" charset="utf-8">
+      require.main('turtle_explorer/app');
+    </script>
   </body>
 </html>

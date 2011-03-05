@@ -1,0 +1,20 @@
+{
+    "name": "turtle_explorer",
+    "description": "Turtle Graphics Editor",
+    "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/bigfish/turtle_explorer.git"
+    },
+    "author": "David Wilhelm <dewilhelm@gmail.com> (dafishinsea.com)",
+    "directories": {
+        "lib": "lib"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "teleport": ">=0.2.2",
+        "ace": ">=0.1.1"
+    }
+}
