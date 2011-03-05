@@ -2,45 +2,8 @@
 <html>
   <head>
     <title>Turtle Graphics Explorer</title>
-    <style>
-      body {
-        font-family: Verdana, Helvetica, Arial;
-        padding:0;
-        margin:0;
-        background-color: #000000;
-        color:#00FF00;
-      }
-      #instructions {
-        padding-left:.5em;
-        font-size: 0.8em;
-      }
-      #feedback {
-        color:red;
-        margin: 0;
-        padding: 0;
-        font-size: 0.6em;
-      } 
-      #showhidelink {
-        color:blue;
-        text-decoration:none;
-        font-size: 0.8em;
-        padding-left: 3em;
-      }
-      #title {
-        padding-left: 180px;
-      }
-      #turtle_buffer {
-        display:box;
-        background-color: #000000;
-        border: 1px solid #00FF00;
-        color: #00FF00;
-        width:98%;
-        height: 99%;
-        margin:0;
-        padding:1%;
-      }
-    </style>
 
+    <link rel="stylesheet" href="resources/css/app.css" type="text/css" media="screen" charset="utf-8">
     <script src="lib/turtle_global.js" ></script>
     <script src="lib/global_procedures.js" ></script>
 
@@ -73,5 +36,6 @@
     <script type="text/javascript" charset="utf-8">
       require.main('turtle_explorer/app');
     </script>
+
   </body>
 </html>
