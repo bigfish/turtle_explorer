@@ -4,11 +4,10 @@
     <title>Turtle Graphics Explorer</title>
 
     <link rel="stylesheet" href="resources/css/app.css" type="text/css" media="screen" charset="utf-8">
-    <script src="lib/turtle_global.js" ></script>
-    <script src="lib/global_procedures.js" ></script>
 
-    <script type="text/javascript" src="support/teleport/teleport.js"></script>
-    
+    <!--<script type="text/javascript" src="support/teleport/teleport.js"></script>-->
+    <script src="require.js" type="text/javascript" charset="utf-8"></script>   
+
   </head>
 
   <body bgcolor="white">
@@ -34,7 +33,20 @@
     </table>
 
     <script type="text/javascript" charset="utf-8">
-      require.main('turtle_explorer/app');
+
+      var config = {
+        paths: {
+         "turtle_explorer": "lib"
+        }
+      };
+      //global variable to reference the turtle for eval'd code
+      var T;
+      require(config, ["turtle_explorer/app"],function (app) {
+          console.log("app required");
+          app.init();
+          T = app.turtle;
+          P = app.procedures;
+        });
     </script>
 
   </body>
